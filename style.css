@@ -1,0 +1,103 @@
+/* FONTS */
+
+  /* roboto-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* roboto-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/roboto-v30-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* roboto-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/roboto-v30-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* roboto-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/roboto-v30-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+/* ------------------------------------------------- */
+
+body {
+    display: grid;
+    grid-template-columns: clamp(250px, 15%, 350px) 1fr;
+
+    font-family: 'Roboto', Sans Serif;
+    font-size: 15px;
+}
+
+:root {
+    --accent-color: #007BFF;
+}
+
+
+/* SIDE BAR AREA */
+
+.left-column {
+    color: #Fff;
+    font-weight: 500;
+    font-size: 1.2rem;
+
+    padding-top: 15px;
+    background-color: #333333 ;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 150px 30px 150px 30px 150px 1fr;
+    justify-items: start;
+    padding-left: 15px;
+}
+.left-column .header {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--accent-color);
+}
+
+.left-column ul {
+    list-style: none;
+}
+.left-column ul a {
+    text-decoration: none;
+}
+.left-column ul div {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+
+    width: fit-content;
+
+    transition: 0.2s;
+}
+.left-column ul div:hover {
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.left-column .bottom {
+    align-self: end;
+    margin-bottom: 15px;
+}
+
