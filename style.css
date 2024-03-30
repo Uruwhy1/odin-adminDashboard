@@ -48,13 +48,16 @@ body {
 
 :root {
     --accent-color: #007BFF;
+    --accent-text: #007bff;
+    --main-color: #fff;
+    --text-changeable: #000;
 }
 
 
 /* SIDE BAR AREA */
 
 .left-column {
-    color: #Fff;
+    color: #fff;
     font-weight: 500;
     font-size: 1.2rem;
 
@@ -73,7 +76,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    color: var(--accent-color);
+    color: var(--accent-text);
 }
 
 .left-column ul {
@@ -92,7 +95,7 @@ body {
     transition: 0.2s;
 }
 .left-column ul div:hover {
-    color: var(--accent-color);
+    color: var(--accent-text);
     cursor: pointer;
 }
 
@@ -101,3 +104,224 @@ body {
     margin-bottom: 15px;
 }
 
+/* RIGHT COLUMN */ 
+
+.right-column {
+  display: grid;
+  grid-template-rows: 70px 1.5fr 1fr;
+  gap: 10px;
+
+  color: var(--text-changeable);
+  background-color: #c4c4c4;
+}
+
+/* RIGHT TOP BAR */
+
+.top-bar {
+  background-color: var(--main-color);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "profile . options";
+  place-content: center;
+}
+
+.profile {
+  grid-area: profile;
+  display: flex;
+  align-items: center;
+
+  margin-left: 30px;
+  font-weight: 500;
+}
+.profile h1 {
+  color: var(--accent-text);
+}
+
+.profile-picture {
+  width: 50px;
+  height: auto;
+  border-radius: 100px;
+
+  margin-right: 10px;
+}
+
+.buttons {
+  grid-area: options;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.buttons .button {
+  background-color: var(--accent-color);
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+
+  color: #fff;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.2s;
+  cursor: pointer;
+}
+.buttons .light-switch {
+  background: no-repeat center url(./images/sun.svg) #333;
+  border-radius: 50px;
+  height: 40px;
+  width: 40px;
+  margin-left: 20px;
+  justify-self: end;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+/* CONTAINERS CSS */
+.projects, .left, .right {
+  background-color: var(--main-color);
+  border-radius: 10px;
+
+  width: calc(100% - 10px);
+  height: 100%;
+
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  grid-template-rows: 45px 1fr;
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+
+  color: #Fff;
+  background-color: var(--accent-color);
+}
+
+
+/* PROJECTS CONTAINER */
+
+.projects-container {
+  margin: 20px 20px;
+
+  display: grid;
+  place-content: start center;
+  grid-template-columns: repeat(5, 300px);
+  grid-auto-rows: 200px;
+  grid-auto-columns: 300px;
+  gap: 15px;
+}
+
+.project-example {
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-area: 'header information';
+}
+
+.project-example img {
+  border-radius: 10px 10px 0 0;
+
+  grid-row: 1/2;
+  grid-column: 1/2;
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
+
+}
+
+.project-example h2 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+
+  width: fit-content;
+  height: fit-content;
+  align-self: end;
+
+  background-color: #ffffff;
+  border-left: 0px;
+  border-radius: 0 5px 0 0;
+  border-bottom: 0px;
+  color: var(--accent-text);
+
+  padding: 4px;
+}
+
+.project-example > div {
+  padding: 5px;
+  background-color: #c4c4c45e;
+  color: var(--text-changeable);
+  border-radius: 0 0 10px 10px;
+
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0 5px;
+} 
+
+.project-example > div > p {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+
+  overflow: hidden;
+  font-weight: 500;
+  padding: 3px;
+  height: 50px;
+}
+
+.projects-container svg {
+  fill: white;
+}
+
+.date, .person {
+  background-color: #ffffffa2;
+  color: var(--accent-text);
+
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+}
+
+.date {
+  align-self: center;
+  justify-self: start;
+
+  --accent-text: red;
+} 
+
+.person {
+  align-self: center;
+  justify-self: end;
+}
+
+/* BOTTOM-RIGHT ROW */
+
+.bottom-row {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+
+  margin-bottom: 10px;
+
+}
+
+.bottom-row h1 {
+  font-size: 1.8em;
+}

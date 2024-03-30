@@ -1,0 +1,12 @@
+.buttons .light-switch {
+    background: no-repeat center url(../images/moon.svg) #333;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    margin-left: 20px;
+    justify-self: end;
+  }
+
+.project-example h2 {
+  background-color: #e9e9e9;
+}

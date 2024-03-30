@@ -5,6 +5,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+  transition: 0.5s;
+
 }
 
 /* Prevent font size inflation */
