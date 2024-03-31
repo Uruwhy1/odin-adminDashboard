@@ -52,6 +52,8 @@ body {
     --accent-text: #007bff;
     --main-color: #fff;
     --text-changeable: #000;
+
+    
 }
 
 
@@ -59,11 +61,15 @@ body {
 
 .left-column {
     color: #fff;
+    height: 100vh;
     font-weight: 500;
     font-size: 1.2rem;
 
     padding-top: 15px;
-    background-color: #333333 ;
+    background-color: #333333;
+
+    position: sticky;
+    top: 0;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -114,6 +120,8 @@ body {
 
   color: var(--text-changeable);
   background-color: #c4c4c4;
+  transition: 0.5s;
+
 }
 
 /* RIGHT TOP BAR */
@@ -197,6 +205,9 @@ body {
   justify-self: center;
   display: grid;
   grid-template-rows: 40px 1fr;
+
+  transition: 0.5s;
+
 }
 .container-header {
   display: flex;
@@ -216,8 +227,9 @@ body {
   display: grid;
   place-content: start center;
   grid-template-rows: repeat(3, 245px);
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-columns: 1fr;
+  grid-auto-rows: 245px;
   gap: 15px;
 }
 
@@ -225,6 +237,9 @@ body {
   display: grid;
   grid-template-rows: 3fr 1fr;
   grid-template-columns: 1fr;
+
+  transition: 0.1s;
+
 }
 .project-example:hover {
   transform: scale(1.05);
@@ -256,6 +271,10 @@ body {
   color: var(--accent-text);
 
   padding: 4px;
+  transition: 0.3s;
+}
+.project-example:hover h2 {
+  margin-bottom: 10px;
 }
 
 .project-example > div {
@@ -333,3 +352,11 @@ body {
   }
 }
 
+@media (max-width: 1155px) {
+  .buttons .button {
+    transform: scale(0.9);
+  }
+  .buttons {
+    gap: 0px;
+  }
+}
